@@ -91,42 +91,6 @@ Output goes to `dist/` — ready to deploy on **Vercel**, **Netlify**, or any st
 
 ---
 
-## 📁 Project Structure
-
-```
-freshbite/
-├── index.html                    ← HTML entry point
-├── public/                       ← Static assets
-├── src/
-│   ├── components/
-│   │   ├── Sidebar.jsx           ← Collapsible dark sidebar (mobile drawer)
-│   │   ├── Navbar.jsx            ← Top navbar (search, notifications, profile)
-│   │   ├── StatsCard.jsx         ← Reusable KPI stat card
-│   │   ├── EmployeeCard.jsx      ← Mini employee row card
-│   │   ├── Modal.jsx             ← Add/Edit modal + Confirm delete modal
-│   │   └── Toast.jsx             ← Global toast notification system
-│   ├── pages/
-│   │   ├── Login.jsx             ← Auth / login page
-│   │   ├── Dashboard.jsx         ← Main dashboard
-│   │   ├── Employees.jsx         ← Employee list & CRUD management
-│   │   ├── Profile.jsx           ← Employee profile detail view
-│   │   ├── Attendance.jsx        ← Monthly attendance grid
-│   │   ├── Payroll.jsx           ← Payroll management
-│   │   └── Leave.jsx             ← Leave request management
-│   ├── data/
-│   │   └── dummyData.js          ← All dummy data (9 Bangladeshi employees)
-│   ├── utils/
-│   │   └── helpers.js            ← Utility functions & style maps
-│   ├── App.jsx                   ← Root component (routing + global state)
-│   ├── main.jsx                  ← React entry point
-│   └── index.css                 ← Global styles + Tailwind imports
-├── package.json
-├── vite.config.js
-├── tailwind.config.js
-└── postcss.config.js
-```
-
----
 
 ## 🎨 Design System
 
@@ -155,60 +119,11 @@ freshbite/
 
 ---
 
-## 👥 Sample Employees (9 total)
 
-| ID | Name | Department | Role | Status |
-|----|------|-----------|------|--------|
-| FB-001 | Rahim Uddin | Kitchen Staff | Head Chef | ✅ Active |
-| FB-002 | Fatema Begum | Service | Sr. Waitress | ✅ Active |
-| FB-003 | Karim Hossain | Kitchen Staff | Line Cook | ✅ Active |
-| FB-004 | Nasrin Akter | Management | Branch Manager | ✅ Active |
-| FB-005 | Jamal Ahmed | Delivery | Delivery Driver | ✅ Active |
-| FB-006 | Sumaiya Islam | Service | Waitress | ❌ Inactive |
-| FB-007 | Rafiqul Islam | Cashier | Head Cashier | ✅ Active |
-| FB-008 | Momena Khatun | Cleaning | Cleaning Lead | ✅ Active |
-| FB-009 | Tariqul Hasan | Kitchen Staff | Pastry Chef | ✅ Active |
 
----
 
-## 📱 Responsive Breakpoints
 
-| Device | Breakpoint | Layout |
-|--------|-----------|--------|
-| Mobile | `< 640px` | Hamburger menu, card views, stacked layout |
-| Tablet | `640px–1024px` | Compact table, hidden columns |
-| Desktop | `> 1024px` | Full sidebar + wide table |
 
----
-
-## 🔧 Customisation
-
-- **Add real auth** → Replace `Login.jsx` fake login with an API call
-- **Connect backend** → Swap `dummyData.js` with `fetch()` / Axios in `App.jsx`
-- **Add React Router** → Replace the `page` state in `App.jsx` with `<Routes>`
-- **Deploy to Vercel** → `npm run build` then drag `dist/` to vercel.com
-
----
-
-## 🚀 Deploy to Vercel (Free)
-
-```bash
-# Install Vercel CLI
-npm i -g vercel
-
-# Deploy
-vercel
-
-# Follow the prompts → your app will be live in 60 seconds!
-```
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License** — free to use for personal and commercial projects.
-
----
 
 <div align="center">
 
