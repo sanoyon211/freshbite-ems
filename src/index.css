@@ -1,0 +1,46 @@
+/* ─────────────────────────────────────────────────────────────
+   src/index.css  —  Light Professional Theme + Responsive
+   ───────────────────────────────────────────────────────────── */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body, #root { height: 100%; margin: 0; padding: 0; }
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #F1F5F9;
+  color: #0F172A;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: #F1F5F9; }
+::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: #94A3B8; }
+
+input, select, textarea { color: #0F172A; font-family: "Poppins", sans-serif; }
+input::placeholder { color: #94A3B8; }
+input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(0.4); cursor: pointer; }
+option { background-color: #fff; color: #0F172A; }
+
+@keyframes spin    { to { transform: rotate(360deg); } }
+@keyframes slideIn { from { opacity:0; transform:translateX(20px); } to { opacity:1; transform:translateX(0); } }
+@keyframes fadeUp  { from { opacity:0; transform:translateY(8px); }  to { opacity:1; transform:translateY(0); } }
+@keyframes modalIn { from { opacity:0; transform:scale(0.95); }      to { opacity:1; transform:scale(1); } }
+
+.animate-spin     { animation: spin    0.7s linear  infinite; }
+.animate-slide-in { animation: slideIn 0.25s ease   forwards; }
+.animate-fade-up  { animation: fadeUp  0.2s ease    forwards; }
+.animate-modal-in { animation: modalIn 0.2s ease    forwards; }
+
+.sidebar-overlay {
+  position: fixed; inset: 0;
+  background: rgba(15,23,42,0.5);
+  backdrop-filter: blur(4px);
+  z-index: 40;
+}
